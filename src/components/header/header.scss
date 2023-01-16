@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.left-tab{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.toggle-wrap{
+    display: flex;
+    gap: 2px;
+}
+
+.toggle-button{
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    width: 64px;
+    height: 36px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: background-color ease-in 0.25s;
+
+    &:active, &.selected{
+        color: #FFF;
+        background-color: #14213D ;
+    }
+}
