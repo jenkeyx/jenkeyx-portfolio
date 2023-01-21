@@ -1,0 +1,26 @@
+@import "src/index";
+
+.landing{
+  font-family: Play, sans-serif;
+  font-weight: 700;
+  color: #14213D;
+  font-size: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap:20px;
+}
+
+.outlined-text{
+  color: transparent;
+  -webkit-text-stroke: 1px #14213D;
+}
+
+.code{
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #14213D;
+
+}

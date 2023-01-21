@@ -1,7 +1,13 @@
+/*Play: extra bold*/
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 /*Motserrat: Medium, Bold, Extra-bold */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 /*JetBrains Mono: Regular, Medium */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --text-main: #14213D
+}
 
 body {
   margin: 0;
@@ -11,9 +17,4 @@ body {
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
