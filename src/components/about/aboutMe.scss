@@ -1,0 +1,33 @@
+.description{
+  margin-top: 66px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 49px;
+}
+
+.facts-list{
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.fact{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 50%;
+
+  .number{
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+  }
+
+  .fact-description{
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+  }
+}

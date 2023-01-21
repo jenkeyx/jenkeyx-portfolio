@@ -12,6 +12,7 @@
 }
 
 .nav-item {
+  scroll-behavior: smooth;
   color: transparent;
   font-family: Play, sans-serif;
   -webkit-text-stroke: 1px var(--text-main);

@@ -11,6 +11,17 @@
 .chapter{
     min-height: 80vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
 }
+
+.title{
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+*{
+     scroll-behavior: smooth;
+ }
