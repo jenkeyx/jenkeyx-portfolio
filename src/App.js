@@ -5,6 +5,7 @@ import NavPanel from "./components/navPanel/navPanel";
 import AboutMe from "./components/about/aboutMe";
 import {useRef} from "react";
 import Cursor from "./components/cursor/cursror";
+import Projects from "./components/projects/projects";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <div>
                 <Landing/>
                 <AboutMe/>
+                <Projects/>
             </div>
             <NavPanel/>
         </div>
