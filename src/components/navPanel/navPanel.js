@@ -9,14 +9,12 @@ const NavPanel = () =>{
                 <NavItem href={"#about"} color={"#219ebc"}>
                     About me
                 </NavItem>
-                <NavItem href={"#projects"} color={"#FCA311"}>
+                <NavItem href={"#projects"} color={"#4361ee"}>
                     Projects
                 </NavItem>
-                <a href={"#about"}>
-                    <button className={"nav-item"}>
-                        Skills
-                    </button>
-                </a>
+                <NavItem href={"#skills"} color={"#f22845"}>
+                    Skills
+                </NavItem>
             </div>
         </div>
     )
