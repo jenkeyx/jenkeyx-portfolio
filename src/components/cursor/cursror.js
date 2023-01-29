@@ -12,8 +12,8 @@ const Cursor = () => {
             setCursorState(prev=>{
                 return{
                     ...prev,
-                    x: e.clientX - prev.r/2,
-                    y: e.clientY - prev.r/2
+                    x: e.clientX +50 - prev.r/2 ,
+                    y: e.clientY +40 - prev.r/2
                 }
             })
         })

@@ -12,18 +12,22 @@ function App() {
     const appRef = useRef()
 
   return (
-    <div className="App" ref={appRef}>
+    <>
         <Cursor/>
-      <Header/>
-        <div className={"content-wrap"} >
-            <div>
-                <Landing/>
-                <AboutMe/>
-                <Projects/>
+        <div className="App" ref={appRef}>
+            <Header/>
+            <div className={"content-wrap"} >
+                <div>
+                    <Landing/>
+                    <AboutMe/>
+                    <Projects/>
+                </div>
+                <NavPanel/>
             </div>
-            <NavPanel/>
+
         </div>
-    </div>
+
+    </>
   );
 }
 
