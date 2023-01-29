@@ -27,16 +27,22 @@ const NavItem = ({href, children, color}) =>{
         if (navItemRef.current){
             const prevState = cursorState
             navItemRef.current.addEventListener("mouseover",()=>{
-                setCursorState({
-                    color: color,
-                    scale: 2
+                setCursorState(prev=> {
+                    return {
+                        ...prev,
+                        color: color,
+                        scale: 2
+                    }
                 })
             })
 
             navItemRef.current.addEventListener("click",()=>{
-                setCursorState({
-                    color: color,
-                    scale: 2
+                setCursorState(prev=> {
+                    return {
+                        ...prev,
+                        color: color,
+                        scale: 2
+                    }
                 })
             })
 

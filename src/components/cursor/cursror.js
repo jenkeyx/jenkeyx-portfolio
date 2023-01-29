@@ -6,69 +6,61 @@ import {cursorAtom} from "../../store/cursor.atom";
 
 const Cursor = () => {
     const [cursorState, setCursorState] = useRecoilState(cursorAtom)
-    const circleRef = useRef()
 
     useEffect(() => {
-        if (circleRef !== null) {
-            document.addEventListener('mousemove', e => {
-                const circle = circleRef.current;
-                window.requestAnimationFrame(() => {
-                    circle.style.top = `${e.clientY - circle.offsetHeight / 2}px`
-                    circle.style.left = `${e.clientX - circle.offsetWidth / 2}px`
-                })
+        document.addEventListener('mousemove', e => {
+            setCursorState(prev=>{
+                return{
+                    ...prev,
+                    x: e.clientX - prev.r/2,
+                    y: e.clientY - prev.r/2
+                }
             })
-            const prev1 = cursorState
+        })
 
-            document.addEventListener('mousedown',()=>{
-                setCursorState({scale: 0.5, color: cursorState.color})
+        document.addEventListener('mousedown', (e) => {
+            setCursorState(prev=>{
+                return {
+                    ...prev,
+                    scale: 0.5
+                }
             })
+        })
 
-            document.addEventListener('mouseup',()=>{
-                setCursorState({scale: prev1.scale, ...prev1})
+        document.addEventListener('mouseup', () => {
+            setCursorState(prev=>{
+                return {
+                    ...prev,
+                    scale: 1
+                }
             })
-        }
+        })
         return () => {
         };
-    }, [circleRef]);
+    }, []);
 
     return (
-        <>
-            <div className={"cursor"} ref={circleRef}>
-                <svg width={"100%"} height={"100%"} xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50%" cy="50%" fill={cursorState.color} r={(100 - 10) * cursorState.scale}/>
+            <div className={"cursor"}>
+                <svg width={"100vw"} height={"100vh"}>
+                        <circle filter={"url(#filter0_f_57_12)"} cx={cursorState.x} cy={cursorState.y} fill={cursorState.color}
+                                r={cursorState.r * cursorState.scale}
+                                style={{transition: `all 0.15s ease-out`}}/>
+                        <circle filter={"url(#filter0_f_57_12)"} cx={cursorState.x} cy={cursorState.y} fill={cursorState.color}
+                                r={cursorState.r * cursorState.scale * 0.95}
+                                style={{transition: `all 0.20s ease-out`}}/>
+                        <circle filter={"url(#filter0_f_57_12)"} cx={cursorState.x} cy={cursorState.y} fill={cursorState.color}
+                                r={cursorState.r * cursorState.scale * 0.90}
+                                style={{transition: `all 0.25s ease-out`}}/>
+                        <circle filter={"url(#filter0_f_57_12)"} cx={cursorState.x} cy={cursorState.y} fill={cursorState.color}
+                                r={cursorState.r * cursorState.scale * 0.85}
+                                style={{transition: `all 0.30s ease-out`}}/>
+                    <defs>
+                        <filter id="filter0_f_57_12" x={0} y={0} width="100%" height="100%" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feGaussianBlur stdDeviation="20" result="effect1_foregroundBlur_57_12"/>
+                        </filter>
+                    </defs>
                 </svg>
             </div>
-            <TrailCircle fill={cursorState.color} scale={cursorState.scale} index={1}/>
-            <TrailCircle fill={cursorState.color} scale={cursorState.scale} index={2}/>
-            <TrailCircle fill={cursorState.color} scale={cursorState.scale} index={3}/>
-            <TrailCircle fill={cursorState.color} scale={cursorState.scale} index={4}/>
-
-        </>
-    )
-}
-
-const TrailCircle = ({fill, scale, index}) =>{
-    const trailRef = useRef()
-    useEffect(() => {
-        if (trailRef.current !== null) {
-            document.addEventListener('mousemove', e => {
-                const circle = trailRef.current;
-                window.requestAnimationFrame(() => {
-                    circle.style.top = `${e.clientY - circle.offsetHeight / 2}px`
-                    circle.style.left = `${e.clientX - circle.offsetWidth / 2}px`
-                })
-            })
-        }
-        return () => {
-
-        };
-    }, [trailRef]);
-    return(
-        <div className={"cursor"} ref={trailRef} style={{transition:`all ${0.025 * index}s ease`}}>
-            <svg width={"100%"} height={"100%"} xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50%" cy="50%" fill={fill} r={(100 - 10*index) * scale }/>
-            </svg>
-        </div>
     )
 }
 export default Cursor
