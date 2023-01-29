@@ -1,5 +1,7 @@
-import React from "react";
-import "./list.scss"
+import React, {useState} from "react";
+import "./list.scss";
+import {ReactComponent as Cross} from "../../../svg/cross.svg"
+
 
 const ProjectList = ({data}) => {
 
@@ -36,9 +38,24 @@ const ProjectList = ({data}) => {
 }
 
 const ListItem = ({projectData}) => {
+
+    const [open, setOpen] = useState(false);
+
     return (<div className={"project"}>
-        <div className={"name outlined-text"}>
-            {projectData.name}
+        <div className={"head"} onClick={()=>setOpen(prev=> !prev)}>
+            <div className={`name outlined-text ${open ? "open" : null}`}>
+                {projectData.name}
+            </div>
+            <Cross className={`cross ${open ? "open" : null}`} />
+        </div>
+        <div className={`body ${open ? "open" : null}`}>
+            <div className={"tags"}>
+                [{projectData.technologies.map((item, i, technologies) =>
+                i + 1 === technologies.length ? `${item}` : `${item}, `)}]
+            </div>
+            <div className={"project-description"}>
+                {projectData.description}
+            </div>
         </div>
     </div>)
 }

@@ -18,13 +18,63 @@
 }
 
 .project{
-  .name{
-    font-family: Play,sans-serif;
-    font-size: 40px;
-    font-weight: 700;
+  .head{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: transparent;
+
+    .name{
+      font-family: Play,sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: inherit;
+    }
+
+    .name.open{
+      color: var(--text-main);
+    }
+
+
+    .cross{
+      transition: all 0.25s ease-out;
+    }
+
+    .cross.open{
+      color: var(--text-main);
+      transform: rotate(45deg);
+    }
 
     &:hover{
-      color: var(--text-main)
+      color: var(--text-main);
+      cursor: pointer;
     }
+  }
+  .body{
+    transition: all 0.25s ease-out;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: var(--text-main);
+
+    .tags{
+      font-family: "JetBrains Mono", sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      margin-top: 25px;
+    }
+
+    .project-description{
+      font-family: Play, sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  .body.open{
+    height: 100%;
+    opacity: 1;
+    padding-bottom: 20px;
   }
 }
