@@ -1,11 +1,11 @@
 import React, {useEffect, useRef} from "react";
-import "./navPanel.scss"
+import styles from "./navPanel.module.scss"
 import {useRecoilState} from "recoil";
 import {cursorAtom} from "../../store/cursor.atom";
 const NavPanel = () =>{
     return(
-        <div className={"wrap"}>
-            <div className={"nav-panel"}>
+        <div className={styles.wrap}>
+            <div className={styles["nav-panel"]}>
                 <NavItem href={"#about"} color={"#219ebc"}>
                     About me
                 </NavItem>
@@ -57,7 +57,7 @@ const NavItem = ({href, children, color}) =>{
 
     return (
         <a href={href} ref={navItemRef}>
-            <button className={"nav-item"}>
+            <button className={styles["nav-item"]}>
                 {children}
             </button>
         </a>

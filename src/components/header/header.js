@@ -1,14 +1,14 @@
 import React, {useState} from "react";
-import "./header.scss"
+import styles from "./header.module.scss"
 import {ReactComponent as Moon}from "../../svg/moon.svg"
 
 const Header = () => {
     return (
-        <div className={"container"}>
-            <div className={"logo"}>
+        <div className={styles.container}>
+            <div className={styles.logo}>
                 SM
             </div>
-            <div className={"left-tab"}>
+            <div className={styles["left-tab"]}>
                 <LangToggle/>
                 <svg id="chart" width="3" height="50" style={{stroke: "#14213D", strokeWidth:1}}>
                     <line x1="2" y1="0" x2="2" y2="50"></line>
@@ -25,9 +25,9 @@ const LangToggle = () => {
 
     const [selectedLang, setSelectedLang] = useState("eng");
 
-    const getClassName = (targetLang) => `toggle-button ${selectedLang === targetLang ? "selected" : ""}`
+    const getClassName = (targetLang) => `${styles["toggle-button"]} ${selectedLang === targetLang ? styles.selected : ""}`
     return (
-        <div className={"toggle-wrap"}>
+        <div className={styles["toggle-wrap"]}>
             <button className={getClassName("rus")} onClick={()=>setSelectedLang("rus")}>
                 RUS
             </button>

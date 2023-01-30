@@ -1,18 +1,18 @@
 import React from "react";
-import "./landing.scss"
+import styles from  "./landing.module.scss"
 import "../../index.scss"
 
 const Landing = () =>{
     return(
         <div className={"chapter"}>
-            <div className={"landing"}>
-                <div className={"outlined-text"}>
+            <div className={styles.landing}>
+                <div className={styles["outlined-text"]}>
                     Hello,
                 </div>
                 <div>
                     <span className={"outlined-text"}>I am</span> <span> Sergey Mhitaryan</span>
                 </div>
-                <div className={"code"}>
+                <div className={styles.code}>
                     &lt;front-end-developer/&gt;
                 </div>
             </div>

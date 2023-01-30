@@ -11,6 +11,13 @@
   --red: #F22845;
 }
 
+.outlined-text{
+  color: transparent;
+  -webkit-text-stroke: 1px #14213D;
+  font-weight: 700;
+  font-family: Play, sans-serif;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
