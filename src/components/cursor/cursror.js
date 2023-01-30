@@ -13,7 +13,7 @@ const Cursor = () => {
                 return{
                     ...prev,
                     x: e.clientX +50 - prev.r/2 ,
-                    y: e.clientY +40 - prev.r/2
+                    y: e.clientY +50 - prev.r/2
                 }
             })
         })
@@ -56,7 +56,7 @@ const Cursor = () => {
                                 style={{transition: `all 0.30s ease-out`}}/>
                     <defs>
                         <filter id="filter0_f_57_12" x={0} y={0} width="100%" height="100%" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                            <feGaussianBlur stdDeviation="20" result="effect1_foregroundBlur_57_12"/>
+                            <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_57_12"/>
                         </filter>
                     </defs>
                 </svg>
