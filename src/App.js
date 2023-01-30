@@ -6,6 +6,7 @@ import AboutMe from "./components/about/aboutMe";
 import {useRef} from "react";
 import Cursor from "./components/cursor/cursror";
 import Projects from "./components/projects/projects";
+import Skills from "./components/skills/skills";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
                     <Landing/>
                     <AboutMe/>
                     <Projects/>
+                    <Skills/>
                 </div>
                 <NavPanel/>
             </div>
