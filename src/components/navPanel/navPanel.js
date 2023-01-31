@@ -47,7 +47,10 @@ const NavItem = ({href, children, color}) =>{
             })
 
             navItemRef.current.addEventListener("mouseleave", ()=>{
-                setCursorState(prevState)
+                setCursorState({
+                    ...prevState,
+                    color: color
+                })
             })
         }
         return () => {
