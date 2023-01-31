@@ -1,5 +1,8 @@
 @import "src/index";
 
+.wrap{
+  padding-top: 0;
+}
 .landing {
   font-family: Play, sans-serif;
   font-weight: 700;
@@ -48,4 +51,7 @@
   font-size: 40px;
   color: var(--text-main);
 
+  @media (max-width: 1023px) {
+    font-size: 20px;
+  }
 }

@@ -7,7 +7,7 @@ const Projects = () =>{
     return (
         <div className={"chapter"} id={"projects"}>
             <div className={"title"}>
-                sergeyMhitaryan.projects()
+                sergey.projects()
             </div>
             <ProjectList data={projectData}/>
         </div>

@@ -6,7 +6,7 @@ const AboutMe = () => {
     return (
         <div className={"chapter"} id={"about"}>
             <div className={"title"}>
-                sergeyMhitaryan.about()
+                sergey.about()
             </div>
 
             <div className={styles.description}>

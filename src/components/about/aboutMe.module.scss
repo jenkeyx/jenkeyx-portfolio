@@ -1,33 +1,48 @@
-.description{
+.description {
   margin-top: 66px;
-  font-family: Play,sans-serif;
+  font-family: Play, sans-serif;
   font-weight: 500;
   font-size: 35px;
   line-height: 49px;
 }
 
-.facts-list{
+.facts-list {
   margin-top: 30px;
   display: flex;
   gap: 50px;
   align-items: flex-start;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    flex-direction: column;
+  }
 }
 
-.fact{
+.fact {
   display: flex;
   gap: 10px;
   align-items: center;
-  max-width: 50%;
 
-  .number{
-    font-family: Montserrat,sans-serif;
+
+  .number {
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-size: 70px;
   }
 
-  .fact-description{
+  .fact-description {
     font-family: "JetBrains Mono", sans-serif;
     font-weight: 400;
     font-size: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 50%;
+  }
+
+  @media (max-width: 1023px) {
+    .fact-description {
+      font-size: 20px;
+    }
   }
 }

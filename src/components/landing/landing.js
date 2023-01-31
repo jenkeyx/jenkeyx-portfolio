@@ -5,7 +5,7 @@ import {ReactComponent as ArrowDown} from "../../svg/arrow-down.svg";
 
 const Landing = () => {
     return (
-        <div className={"chapter"}>
+        <div className={`chapter ${styles.wrap}`}>
             <div className={styles.landing}>
                 <div className={styles["outlined-text"]}>
                     Hello,

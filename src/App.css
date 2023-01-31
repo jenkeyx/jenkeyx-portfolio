@@ -1,6 +1,12 @@
 .App{
     padding: 40px 50px;
-    color: var(--text-main)
+    color: var(--text-main);
+}
+
+@media (max-width: 1024px) {
+    .App{
+        padding: 40px 30px
+    }
 }
 
 .background{
@@ -27,16 +33,28 @@
     gap: 60px;
 }
 
+.title{
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
 @media (min-width: 1024px){
     .chapter{
         max-width: 62.5%;
     }
 }
 
-.title{
-    font-family: "JetBrains Mono", sans-serif;
-    font-weight: 500;
-    font-size: 40px;
+@media (max-width: 1023px) {
+    .chapter{
+        padding-top: 10vh;
+        min-height: 40vh;
+        gap: 30px;
+    }
+
+    .title{
+        font-size: 30px;
+    }
 }
 
 *{

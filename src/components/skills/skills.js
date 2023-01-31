@@ -5,7 +5,7 @@ const Skills = () =>{
     return(
         <div className={"chapter"} id={"skills"}>
             <div className={"title"}>
-                sergeyMhitaryan.skills()
+                sergey.skills()
             </div>
             <div className={"outlined-text"} style={{fontSize: 40}}>
                 React.js, Redux, Recoil, SCSS, Node.js, JavaScript, GitHub, GitLab, CI/CD
