@@ -3,20 +3,22 @@ import Header from "./components/header/header";
 import Landing from "./components/landing/landing";
 import NavPanel from "./components/navPanel/navPanel";
 import AboutMe from "./components/about/aboutMe";
-import {useRef} from "react";
 import Cursor from "./components/cursor/cursror";
 import Projects from "./components/projects/projects";
 import Skills from "./components/skills/skills";
 
+import './index.scss';
+import {useRecoilValue} from "recoil";
+import {themeAtom} from "./store/theme.atom";
+
 function App() {
-
-    const appRef = useRef()
-
+    const theme = useRecoilValue(themeAtom)
   return (
     <>
         <Cursor/>
-        <div className="App" ref={appRef}>
+        <div className={`App ${theme.theme === "light" ? "light" : "dark"}`}>
             <Header/>
+            <div className={"background"}></div>
             <div className={"content-wrap"} >
                 <div>
                     <Landing/>

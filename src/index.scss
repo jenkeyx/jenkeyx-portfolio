@@ -3,17 +3,34 @@
 /*JetBrains Mono: Regular, Medium */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
+//PALETTE
 :root{
-  --text-main: #14213D;
+  --dark-purple: #14213D;
+  --deep-blue: #192428;
   --orange: #FCA311;
   --purple: #4361EE;
   --light-green: #219EBC;
   --red: #F22845;
+  --white: #FFFFFF;
+}
+
+
+:global{
+  //THEME STYLES
+  .dark{
+    --background: var(--deep-blue);
+    --text-main: var(--white)
+  }
+
+  .light{
+    --background: var(--white);
+    --text-main: var(--dark-purple);
+  }
 }
 
 .outlined-text{
   color: transparent;
-  -webkit-text-stroke: 1px #14213D;
+  -webkit-text-stroke: 1px var(--text-main);
   font-weight: 700;
   font-family: Play, sans-serif;
 }

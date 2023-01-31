@@ -31,17 +31,12 @@
       color: inherit;
     }
 
-    .name.open{
-      color: var(--text-main);
-    }
-
 
     .cross{
       transition: all 0.25s ease-out;
     }
 
     .cross.open{
-      color: var(--text-main);
       transform: rotate(45deg);
     }
 
@@ -55,7 +50,6 @@
     height: 0;
     opacity: 0;
     overflow: hidden;
-    color: var(--text-main);
 
     .tags{
       font-family: "JetBrains Mono", sans-serif;

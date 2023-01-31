@@ -3,7 +3,7 @@
 .landing{
   font-family: Play, sans-serif;
   font-weight: 700;
-  color: #14213D;
+  color: var(--text-main);
   font-size: 60px;
 
   display: flex;
@@ -16,6 +16,6 @@
   font-family: "JetBrains Mono", sans-serif;
   font-weight: 400;
   font-size: 40px;
-  color: #14213D;
+  color: var(--text-main);
 
 }
