@@ -25,7 +25,12 @@
     flex-direction: column;
     justify-content: center;
     gap: 60px;
-    max-width: 900px;
+}
+
+@media (min-width: 1024px){
+    .chapter{
+        max-width: 62.5%;
+    }
 }
 
 .title{

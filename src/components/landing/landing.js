@@ -1,9 +1,10 @@
 import React from "react";
-import styles from  "./landing.module.scss"
+import styles from "./landing.module.scss"
 import "../../index.scss"
+import {ReactComponent as ArrowDown} from "../../svg/arrow-down.svg";
 
-const Landing = () =>{
-    return(
+const Landing = () => {
+    return (
         <div className={"chapter"}>
             <div className={styles.landing}>
                 <div className={styles["outlined-text"]}>
@@ -15,6 +16,12 @@ const Landing = () =>{
                 <div className={styles.code}>
                     &lt;front-end-developer/&gt;
                 </div>
+
+                <button className={styles["arrow-down"]}>
+                    <a href={"#nav-panel"}>
+                        <ArrowDown/>
+                    </a>
+                </button>
             </div>
         </div>
     )

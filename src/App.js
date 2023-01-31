@@ -22,11 +22,11 @@ function App() {
             <div className={"content-wrap"} >
                 <div>
                     <Landing/>
+                    <NavPanel/>
                     <AboutMe/>
                     <Projects/>
                     <Skills/>
                 </div>
-                <NavPanel/>
             </div>
 
         </div>

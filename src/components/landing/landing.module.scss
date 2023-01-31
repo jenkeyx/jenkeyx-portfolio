@@ -1,6 +1,6 @@
 @import "src/index";
 
-.landing{
+.landing {
   font-family: Play, sans-serif;
   font-weight: 700;
   color: var(--text-main);
@@ -9,10 +9,40 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap:20px;
+  gap: 20px;
+
+  @media (max-width: 1023px) {
+    height: 80vh;
+
+    &>div:first-child{
+      margin-top: auto;
+    }
+  }
 }
 
-.code{
+.arrow-down {
+  background: transparent;
+  border: none;
+  margin-top: auto;
+  margin-bottom: 0;
+  align-self: flex-start;
+
+  svg{
+    circle {
+      fill: var(--text-main);
+    }
+
+    path {
+      fill: var(--background);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.code {
   font-family: "JetBrains Mono", sans-serif;
   font-weight: 400;
   font-size: 40px;

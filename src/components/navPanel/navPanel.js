@@ -4,7 +4,7 @@ import {useRecoilState} from "recoil";
 import {cursorAtom} from "../../store/cursor.atom";
 const NavPanel = () =>{
     return(
-        <div className={styles.wrap}>
+        <div className={styles.wrap} id={"nav-panel"}>
             <div className={styles["nav-panel"]}>
                 <NavItem href={"#about"} color={"#219ebc"}>
                     About me
