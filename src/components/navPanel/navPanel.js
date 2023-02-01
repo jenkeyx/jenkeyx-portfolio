@@ -2,18 +2,18 @@ import React, {useEffect, useRef, useState} from "react";
 import styles from "./navPanel.module.scss"
 import {useRecoilState} from "recoil";
 import {cursorAtom} from "../../store/cursor.atom";
-const NavPanel = ({about, project, skills}) =>{
+const NavPanel = ({about, project, skills, data}) =>{
     return(
         <div className={styles.wrap} id={"nav-panel"}>
             <div className={styles["nav-panel"]}>
                 <NavItem href={"#about"} color={"#219ebc"} isVisible={about}>
-                    About me
+                    {data.about}
                 </NavItem>
                 <NavItem href={"#projects"} color={"#4361ee"} isVisible={project}>
-                    Projects
+                    {data.projects}
                 </NavItem>
                 <NavItem href={"#skills"} color={"#f22845"} isVisible={skills}>
-                    Skills
+                    {data.skills}
                 </NavItem>
             </div>
         </div>

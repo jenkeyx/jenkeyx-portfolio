@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import styles from "./header.module.scss"
 import {ReactComponent as Moon}from "../../svg/moon.svg"
 import {ReactComponent as Sun}from "../../svg/sun.svg"
 import {useRecoilState} from "recoil";
 import {themeAtom} from "../../store/theme.atom";
+import {languageAtom} from "../../store/language.atom";
 
 const Header = () => {
     const [theme, setTheme] = useRecoilState(themeAtom)
@@ -28,7 +29,7 @@ const Header = () => {
 
 const LangToggle = () => {
 
-    const [selectedLang, setSelectedLang] = useState("eng");
+    const [selectedLang, setSelectedLang] = useRecoilState(languageAtom);
 
     const getClassName = (targetLang) => `${styles["toggle-button"]} ${selectedLang === targetLang ? styles.selected : ""}`
     return (
@@ -36,7 +37,7 @@ const LangToggle = () => {
             <button className={getClassName("rus")} onClick={()=>setSelectedLang("rus")}>
                 RUS
             </button>
-            <button className={getClassName("eng")} onClick={()=>setSelectedLang("eng")}>
+            <button className={getClassName("en")} onClick={()=>setSelectedLang("en")}>
                 ENG
             </button>
         </div>

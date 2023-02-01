@@ -3,15 +3,15 @@ import styles from "./landing.module.scss"
 import "../../index.scss"
 import {ReactComponent as ArrowDown} from "../../svg/arrow-down.svg";
 
-const Landing = ({refProp}) => {
+const Landing = ({refProp,data}) => {
     return (
         <div className={`chapter ${styles.wrap}`} ref={refProp}>
             <div className={styles.landing}>
                 <div className={styles["outlined-text"]}>
-                    Hello,
+                    {data.greeting}
                 </div>
                 <div>
-                    <span className={"outlined-text"}>I am</span> <span> Sergey Mhitaryan</span>
+                    <span className={"outlined-text"}>{data.introducing.iam}</span> <span>{data.introducing.name}</span>
                 </div>
                 <div className={styles.code}>
                     &lt;front-end-developer/&gt;

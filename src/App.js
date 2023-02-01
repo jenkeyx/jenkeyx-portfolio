@@ -12,6 +12,8 @@ import {useRecoilValue} from "recoil";
 import {themeAtom} from "./store/theme.atom";
 import {useRef} from "react";
 import {useOnScreen} from "./hooks/useOnScreen";
+import {languageAtom} from "./store/language.atom";
+import {localization} from "./localization/localization";
 
 function App() {
     const theme = useRecoilValue(themeAtom)
@@ -24,6 +26,10 @@ function App() {
     const isProjectsOnScreen = useOnScreen(projectsRef)
     const isSkillsOnScreen = useOnScreen(skillsRef)
 
+    const lang = useRecoilValue(languageAtom)
+    const localizationData = localization[lang]
+    console.log(lang)
+
     return (
     <>
         <Cursor/>
@@ -32,10 +38,10 @@ function App() {
             <div className={"background"}></div>
             <div className={"content-wrap"} >
                 <div>
-                    <Landing refProp={landingRef}/>
-                    <NavPanel about={isAboutOnScreen} project={isProjectsOnScreen} skills={isSkillsOnScreen}/>
+                    <Landing refProp={landingRef} data={localizationData}/>
+                    <NavPanel about={isAboutOnScreen} project={isProjectsOnScreen} skills={isSkillsOnScreen} data={localizationData.navPanel}/>
                     <AboutMe refProp={aboutRef}/>
-                    <Projects refProp={projectsRef}/>
+                    <Projects refProp={projectsRef} data={localizationData.projects}/>
                     <Skills refProp={skillsRef}/>
                 </div>
             </div>
