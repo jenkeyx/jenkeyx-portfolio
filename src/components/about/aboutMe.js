@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./aboutMe.module.scss"
 
-const AboutMe = () => {
+const AboutMe = ({refProp}) => {
 
     return (
-        <div className={"chapter"} id={"about"}>
+        <div className={"chapter"} id={"about"} ref={refProp}>
             <div className={"title"}>
                 sergey.about()
             </div>

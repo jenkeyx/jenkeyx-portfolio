@@ -11,7 +11,7 @@
 
   @media (max-width: 1023px) {
     align-items: flex-start;
-    justify-items: flex-end;
+    justify-items: flex-start;
     padding-top: 100px;
   }
 }
@@ -34,6 +34,9 @@
   transition: 0.15s ease-in;
 
   &:hover{
+    color: var(--text-main);
+  }
+  &.selected{
     color: var(--text-main);
   }
 }

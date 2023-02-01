@@ -10,10 +10,21 @@ import Skills from "./components/skills/skills";
 import './index.scss';
 import {useRecoilValue} from "recoil";
 import {themeAtom} from "./store/theme.atom";
+import {useRef} from "react";
+import {useOnScreen} from "./hooks/useOnScreen";
 
 function App() {
     const theme = useRecoilValue(themeAtom)
-  return (
+    const landingRef = useRef();
+    const aboutRef = useRef();
+    const projectsRef = useRef();
+    const skillsRef = useRef();
+
+    const isAboutOnScreen = useOnScreen(aboutRef)
+    const isProjectsOnScreen = useOnScreen(projectsRef)
+    const isSkillsOnScreen = useOnScreen(skillsRef)
+
+    return (
     <>
         <Cursor/>
         <div className={`App ${theme.theme === "light" ? "light" : "dark"}`}>
@@ -21,11 +32,11 @@ function App() {
             <div className={"background"}></div>
             <div className={"content-wrap"} >
                 <div>
-                    <Landing/>
-                    <NavPanel/>
-                    <AboutMe/>
-                    <Projects/>
-                    <Skills/>
+                    <Landing refProp={landingRef}/>
+                    <NavPanel about={isAboutOnScreen} project={isProjectsOnScreen} skills={isSkillsOnScreen}/>
+                    <AboutMe refProp={aboutRef}/>
+                    <Projects refProp={projectsRef}/>
+                    <Skills refProp={skillsRef}/>
                 </div>
             </div>
 

@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const Skills = () =>{
+const Skills = ({refProp}) =>{
     return(
-        <div className={"chapter"} id={"skills"}>
+        <div className={"chapter"} id={"skills"} ref={refProp}>
             <div className={"title"}>
                 sergey.skills()
             </div>

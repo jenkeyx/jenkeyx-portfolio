@@ -3,9 +3,9 @@ import styles from "./landing.module.scss"
 import "../../index.scss"
 import {ReactComponent as ArrowDown} from "../../svg/arrow-down.svg";
 
-const Landing = () => {
+const Landing = ({refProp}) => {
     return (
-        <div className={`chapter ${styles.wrap}`}>
+        <div className={`chapter ${styles.wrap}`} ref={refProp}>
             <div className={styles.landing}>
                 <div className={styles["outlined-text"]}>
                     Hello,

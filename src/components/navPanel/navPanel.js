@@ -1,18 +1,18 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import styles from "./navPanel.module.scss"
 import {useRecoilState} from "recoil";
 import {cursorAtom} from "../../store/cursor.atom";
-const NavPanel = () =>{
+const NavPanel = ({about, project, skills}) =>{
     return(
         <div className={styles.wrap} id={"nav-panel"}>
             <div className={styles["nav-panel"]}>
-                <NavItem href={"#about"} color={"#219ebc"}>
+                <NavItem href={"#about"} color={"#219ebc"} isVisible={about}>
                     About me
                 </NavItem>
-                <NavItem href={"#projects"} color={"#4361ee"}>
+                <NavItem href={"#projects"} color={"#4361ee"} isVisible={project}>
                     Projects
                 </NavItem>
-                <NavItem href={"#skills"} color={"#f22845"}>
+                <NavItem href={"#skills"} color={"#f22845"} isVisible={skills}>
                     Skills
                 </NavItem>
             </div>
@@ -20,47 +20,44 @@ const NavPanel = () =>{
     )
 }
 
-const NavItem = ({href, children, color}) =>{
+const NavItem = ({href, children, color, isVisible}) =>{
     const navItemRef = useRef()
-    const [cursorState, setCursorState] = useRecoilState(cursorAtom)
+    const [_, setCursorState] = useRecoilState(cursorAtom)
+    const [selected, setSelected] = useState(true)
+
+    const changeCursorState = (scale)=>{
+        setCursorState(prev=>(
+            {
+                ...prev,
+                scale: scale,
+                color: color
+            }
+        ))
+    }
+
     useEffect(() => {
         if (navItemRef.current){
-            const prevState = cursorState
-            navItemRef.current.addEventListener("mouseover",()=>{
-                setCursorState(prev=> {
-                    return {
-                        ...prev,
-                        color: color,
-                        scale: 2
-                    }
-                })
-            })
+            navItemRef.current.addEventListener("mouseover",()=>changeCursorState(2))
 
-            navItemRef.current.addEventListener("click",()=>{
-                setCursorState(prev=> {
-                    return {
-                        ...prev,
-                        color: color,
-                        scale: 2
-                    }
-                })
-            })
+            navItemRef.current.addEventListener("click",()=>changeCursorState(2))
 
-            navItemRef.current.addEventListener("mouseleave", ()=>{
-                setCursorState({
-                    ...prevState,
-                    color: color
-                })
-            })
+            navItemRef.current.addEventListener("mouseleave", ()=>changeCursorState(1))
         }
-        return () => {
-
-        };
     }, [navItemRef]);
+
+    useEffect(() => {
+        if (isVisible) {
+            changeCursorState(1)
+            setSelected(isVisible)
+        }else {
+            setSelected(false)
+        }
+    }, [isVisible]);
+
 
     return (
         <a href={href} ref={navItemRef}>
-            <button className={styles["nav-item"]}>
+            <button className={`${styles["nav-item"]} ${selected && styles["selected"]}`}>
                 {children}
             </button>
         </a>
