@@ -5,7 +5,7 @@
   font-size: 35px;
   line-height: 49px;
   @media (max-width: 1023px) {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 160%;
   }
 }
@@ -15,7 +15,6 @@
   display: flex;
   gap: 50px;
   align-items: flex-start;
-  display: flex;
 
   @media (max-width: 1023px) {
     gap: 10px;
