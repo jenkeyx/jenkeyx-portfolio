@@ -10,6 +10,14 @@ export const localization = {
             projects: "Projects",
             skills: "Skills",
         },
+        about:{
+            description: "ITMO bachelor in computer science.Front-end developer with 1 year of commercial experience." +
+                " Build UI, provide better UX for web-sites.",
+            facts:{
+                experience: "Years of experience in front-end developing",
+                projects: "Projects"
+            }
+        },
         projects: [
             {
                 name: "Megabyte media",
@@ -80,6 +88,14 @@ export const localization = {
             about: "Обо мне",
             projects: "Проекты",
             skills: "Навыки",
+        },
+        about:{
+            description: "Бакалавр ИТМО в области компьютерных наук, с 1 годом коммерческой разработки" +
+                "Разрабатываю UI, улучшаю UX веб-сайтов и веб-приложений",
+            facts:{
+                experience: "Года опыта в front-end разработке",
+                projects: "Проектов"
+            }
         },
         projects: [
             {

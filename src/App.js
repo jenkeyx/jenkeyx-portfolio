@@ -40,7 +40,7 @@ function App() {
                 <div>
                     <Landing refProp={landingRef} data={localizationData}/>
                     <NavPanel about={isAboutOnScreen} project={isProjectsOnScreen} skills={isSkillsOnScreen} data={localizationData.navPanel}/>
-                    <AboutMe refProp={aboutRef}/>
+                    <AboutMe refProp={aboutRef} data={localizationData.about}/>
                     <Projects refProp={projectsRef} data={localizationData.projects}/>
                     <Skills refProp={skillsRef}/>
                 </div>
