@@ -55,4 +55,10 @@
         color: var(--background);
         background-color: var(--text-main) ;
     }
+
+    @media (max-width: 576px) {
+        font-size: 15px;
+        width: 60px;
+        height: 30px;
+    }
 }

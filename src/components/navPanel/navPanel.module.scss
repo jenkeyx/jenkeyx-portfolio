@@ -39,4 +39,8 @@
   &.selected{
     color: var(--text-main);
   }
+
+  @media (max-width: 576px) {
+    font-size: 45px;
+  }
 }
