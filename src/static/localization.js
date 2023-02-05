@@ -20,6 +20,7 @@ export const localization = {
         },
         projects: [
             {
+                id: "megabyte",
                 name: "Megabyte media",
                 technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript", "Material UI"],
                 description: "Developed frontend for a university’s media portal with a team of 4 developers. " +
@@ -29,6 +30,7 @@ export const localization = {
                 year: 2021
             },
             {
+                id: "krypton",
                 name: "Krypton",
                 technologies : ["Node.js", "GraphQL", "Strapi", "JWT"],
                 description: "Developed node.js script for a Strapi CMS, that fetches product data in an XML file which " +
@@ -36,12 +38,14 @@ export const localization = {
                 year: 2022
             },
             {
+                id: "freedom",
                 name: "Freedom 24",
                 technologies : ["HTML5", "SCSS", "JavaScript", "Bootstrap", "GitLab"],
                 description: "Implemented US corporate stock options page layout using vanilla JS, SCSS and Bottstrap components",
                 year: 2022
             },
             {
+                id:"pwrboard",
                 name: "PWRBoard",
                 technologies : ["React.js", "React Hooks", "JavaScript", "SCSS", "GitLab"],
                 description: "Implemented PWRboard constructor for a project launch on Indiegogo. Constructor allows the\n" +
@@ -51,6 +55,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"graphene",
                 name: "Graphene",
                 technologies : ["Gatsby.js", "Strapi", "React.js", "GraphQL", "Material UI", "Media Devices API",
                     "Intersection observer API", "GitLab"],
@@ -61,6 +66,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"mindmoney",
                 name: "Mind-money",
                 technologies : ["React.js", "Redux", "Redux-tools", "Gatsby.js", "Material UI"],
                 description: "Implemented user registration and verification form using Redux+ReduxTools state management " +
@@ -69,6 +75,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"intg",
                 name: "INTG 101",
                 technologies: ["React.js, Recoil, Material UI,CSS-IN-JS, PWA"],
                 description: "Implemented component system of UI, created documentation via Storybook libray, " +
@@ -99,6 +106,7 @@ export const localization = {
         },
         projects: [
             {
+                id:"megabyte",
                 name: "Мегабайт медиа",
                 technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript", "Material UI"],
                 description: "Разрабатывал компоненты для университетского медиа портала в команде " +
@@ -106,9 +114,31 @@ export const localization = {
                     "собственную реализацию плеера для подкастов при помощи React Hooks и Web Audio API. " +
                     "В ходе разработки использовали различные методы Next.js с " +
                     "приминением технологии Server Side Rendering",
-                year: 2021
+                year: 2021,
+                pictures:{
+                    mainPic: "megabyte/mb-main.png",
+                    showcases: [
+                        {
+                            src: "megabyte/player.png",
+                            alt: "Страница и плеер подкаста с кратким описанием содержимого"
+                        },
+                        {
+                            src: "megabyte/podcast-page.png",
+                            alt: "Страница всех подкастов студии"
+                        },
+                        {
+                            src: "megabyte/poll-title.png",
+                            alt: "Титульная страница для тестов"
+                        },
+                        {
+                            src: "megabyte/poll.png",
+                            alt: "Опрос со всплывающими результатами"
+                        }
+                    ]
+                }
             },
             {
+                id:"krypton",
                 name: "Krypton",
                 technologies : ["Node.js", "GraphQL", "Strapi", "JWT"],
                 description: "Разработал скрипт на Node.js для Strapi CMS, позволяющий обновлять, создавать " +
@@ -116,6 +146,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"freedom",
                 name: "Freedom 24",
                 technologies : ["HTML5", "SCSS", "JavaScript", "Bootstrap", "GitLab"],
                 description: "Разработал страницу \"Опционы акций корпораций США\" для финансовой организации " +
@@ -123,6 +154,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"pwrboard",
                 name: "PWRBoard",
                 technologies : ["React.js", "React Hooks", "JavaScript", "SCSS", "GitLab"],
                 description: "Разработал конструктор для PWRBoard – стартапа на Indiegogo. Конструктор позволяет\n" +
@@ -131,6 +163,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"graphene",
                 name: "Graphene",
                 technologies : ["Gatsby.js", "Strapi", "React.js", "GraphQL", "Material UI", "Media Devices API",
                     "Intersection observer API", "GitLab"],
@@ -141,6 +174,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"mindmoney",
                 name: "Mind-money",
                 technologies : ["React.js", "Redux", "Redux-tools", "Gatsby.js", "Material UI"],
                 description: "Разработал регистрацию и верификацию пользователя при помощи Redux+ReduxTools\n" +
@@ -149,6 +183,7 @@ export const localization = {
                 year: 2022
             },
             {
+                id:"intg",
                 name: "INTG 101",
                 technologies: ["React.js, Recoil, Material UI,CSS-IN-JS, PWA"],
                 description: "Разработал систему компонентов UI, создал документацию по системе компонентов " +

@@ -1,0 +1,78 @@
+
+.article{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title{
+  padding-top: 10vh;
+  font-family: Play, sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+
+  align-self: flex-end;
+}
+
+.tag-list{
+  margin-top: 2rem;
+  display: flex;
+  align-self: flex-end;
+  gap:5px;
+
+  .tag{
+    font-family: Play, sans-serif;
+    padding: 12px 15px;
+    color: var(--text-main);
+    border: 1px solid var(--text-main);
+    border-radius: 2rem;
+  }
+}
+
+.content{
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 40px;
+}
+
+.main-pic-wrap{
+  align-self: center;
+  width: 90%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  background: black;
+}
+
+.main-pic{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.description{
+  font-family: Play, sans-serif;
+  font-weight: 400;
+  font-size: 2vw;
+  line-height: 150%;
+}
+
+.showcase{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+
+  .caption{
+    align-self: flex-start;
+    padding-top: 10px;
+    font-family: Play, sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    opacity: 0.8;
+  }
+}

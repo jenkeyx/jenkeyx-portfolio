@@ -1,14 +1,16 @@
 export const projectData = [
     {
+        id:"megabyte",
         name: "Megabyte media",
         technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript", "Material UI"],
         description: "Developed frontend for a university’s media portal with a team of 4 developers. " +
             "Implemented RESTful API based on OpenAPI Specification. Implemented UI elements for a project " +
             "component system, and implemented a custom podcast player using React Hooks and Web Audio API. " +
             "Developed site pages with data fetch using Next.js methods according to Server Side Rendering",
-        year: 2021
+        year: 2021,
     },
     {
+        id:"krypton",
         name: "Krypton",
         technologies : ["Node.js", "GraphQL", "Strapi", "JWT"],
         description: "Developed node.js script for a Strapi CMS, that fetches product data in an XML file which " +
@@ -16,12 +18,14 @@ export const projectData = [
         year: 2022
     },
     {
+        id:"freedom",
         name: "Freedom 24",
         technologies : ["HTML5", "SCSS", "JavaScript", "Bootstrap", "GitLab"],
         description: "Implemented US corporate stock options page layout using vanilla JS, SCSS and Bottstrap components",
         year: 2022
     },
     {
+        id:"pwrboard",
         name: "PWRBoard",
         technologies : ["React.js", "React Hooks", "JavaScript", "SCSS", "GitLab"],
         description: "Implemented PWRboard constructor for a project launch on Indiegogo. Constructor allows the\n" +
@@ -31,6 +35,7 @@ export const projectData = [
         year: 2022
     },
     {
+        id:"graphene",
         name: "Graphene",
         technologies : ["Gatsby.js", "Strapi", "React.js", "GraphQL", "Material UI", "Media Devices API",
             "Intersection observer API", "GitLab"],
@@ -41,6 +46,7 @@ export const projectData = [
         year: 2022
     },
     {
+        id:"mindmoney",
         name: "Mind-money",
         technologies : ["React.js", "Redux", "Redux-tools", "Gatsby.js", "Material UI"],
         description: "Implemented user registration and verification form using Redux+ReduxTools state management " +
@@ -49,8 +55,9 @@ export const projectData = [
         year: 2022
     },
     {
+        id:"intg",
         name: "INTG 101",
-        technologies: ["React.js, Recoil, Material UI,CSS-IN-JS, PWA"],
+        technologies: ["React.js", "Recoil", "Material UI","CSS-IN-JS", "PWA"],
         description: "Implemented component system of UI, created documentation via Storybook libray, " +
             "developed data flow system of the app based on Recoil. Developed tracker page, statistics, " +
             "main menu. Implemented PWA features: maskable icon, app caching to be avalable offline, skeleton.",

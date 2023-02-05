@@ -50,8 +50,8 @@ const ListItem = ({projectData}) => {
         </div>
         <div className={`${styles.body} ${open ? styles.open : null}`}>
             <div className={styles.tags}>
-                [{projectData.technologies.map((item, i, technologies) =>
-                i + 1 === technologies.length ? `${item}` : `${item}, `)}]
+                {projectData.technologies.map((item, i, technologies) =>
+                i + 1 === technologies.length ? `${item}` : `${item}, `)}
             </div>
             <div className={styles["project-description"]}>
                 {projectData.description}
