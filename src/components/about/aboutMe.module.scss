@@ -1,9 +1,16 @@
 .description {
-  margin-top: 66px;
   font-family: Play, sans-serif;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 49px;
+  font-weight: 400;
+  font-size: 2vw;
+  line-height: 150%;
+
+  @media (max-width: 1023px) {
+    font-size: 3.5vw;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 5.5vw;
+  }
 }
 
 .facts-list {
@@ -25,13 +32,12 @@
 
 
   .number {
-    font-family: Montserrat, sans-serif;
+    font-family: Play, sans-serif;
     font-weight: 700;
     font-size: 70px;
   }
 
   .fact-description {
-    font-family: "JetBrains Mono", sans-serif;
     font-weight: 400;
     font-size: 30px;
   }
