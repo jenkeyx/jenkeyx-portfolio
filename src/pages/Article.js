@@ -1,6 +1,7 @@
 import React from "react";
-import {useLoaderData} from "react-router-dom";
+import {Link, useLoaderData} from "react-router-dom";
 import styles from"./article.module.scss";
+import {ReactComponent as ArrowBack} from "../static/svg/arrow-back.svg";
 
 export const getArticleName = ({params}) => {
     return params.projectId
@@ -8,13 +9,18 @@ export const getArticleName = ({params}) => {
 
 const Article = ({projectsData}) => {
     const projectId = useLoaderData()
-
     const data = projectsData.find(project=> project.id === projectId)
-    console.log(`../static/img/${data.mainPic}\``)
 
     return (<div className={styles["article"]}>
-        <div className={styles["title"]}>
-            {data.name}
+        <div className={styles["header"]}>
+            <Link to={"/"}>
+                <button className={styles["back-button"]}>
+                    <ArrowBack/>
+                </button>
+            </Link>
+            <div className={styles["title"]}>
+                {data.name}
+            </div>
         </div>
         <div className={styles["tag-list"]}>
             {data.technologies.map(item=> <div className={styles["tag"]}>{item.replace(",","")}</div>)}

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styles from "./list.module.scss";
-import {ReactComponent as Cross} from "../../../svg/cross.svg"
+import {ReactComponent as Cross} from "../../../static/svg/cross.svg"
 
 
 const ProjectList = ({data}) => {

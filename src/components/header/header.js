@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./header.module.scss"
-import {ReactComponent as Moon}from "../../svg/moon.svg"
-import {ReactComponent as Sun}from "../../svg/sun.svg"
+import {ReactComponent as Moon}from "../../static/svg/moon.svg"
+import {ReactComponent as Sun}from "../../static/svg/sun.svg"
 import {useRecoilState} from "recoil";
 import {themeAtom} from "../../store/theme.atom";
 import {languageAtom} from "../../store/language.atom";

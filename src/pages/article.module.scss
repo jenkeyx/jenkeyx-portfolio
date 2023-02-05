@@ -5,8 +5,20 @@
   width: 100%;
 }
 
-.title{
+.header{
   padding-top: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .back-button{
+    height: auto;
+    background: none;
+    border: none;
+    color: var(--text-main);
+  }
+}
+.title{
   font-family: Play, sans-serif;
   font-size: 7rem;
   font-weight: 700;
