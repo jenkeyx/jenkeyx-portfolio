@@ -13,7 +13,7 @@ const Article = ({projectsData}) => {
 
     return (<div className={styles["article"]}>
         <div className={styles["header"]}>
-            <Link to={"/"}>
+            <Link to={"/"} className={styles["back-button"]}>
                 <button className={styles["back-button"]}>
                     <ArrowBack/>
                 </button>
