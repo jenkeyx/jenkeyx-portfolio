@@ -29,7 +29,6 @@
     align-items: center;
     gap: 15px;
     color: transparent;
-
     .name{
       font-family: Play,sans-serif;
       font-size: 40px;
@@ -60,8 +59,9 @@
     .tags{
       font-family: "JetBrains Mono", sans-serif;
       font-weight: 400;
-      font-size: 30px;
+      font-size: 20px;
       margin-top: 25px;
+      width: auto;
     }
 
     .project-description{

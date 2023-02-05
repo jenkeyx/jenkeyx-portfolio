@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./landing.module.scss"
 import "../../index.scss"
-import {ReactComponent as ArrowDown} from "../../svg/arrow-down.svg";
+import {ReactComponent as ArrowDown} from "../../static/svg/arrow-down.svg";
 
 const Landing = ({refProp,data}) => {
     return (
