@@ -1,6 +1,7 @@
 .App{
     padding: 40px 50px;
     color: var(--text-main);
+    font-family: Play, sans-serif;
 }
 
 @media (max-width: 1024px) {

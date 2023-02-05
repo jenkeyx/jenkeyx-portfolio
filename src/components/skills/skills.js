@@ -7,7 +7,7 @@ const Skills = ({refProp}) =>{
             <div className={"title"}>
                 sergey.skills()
             </div>
-            <div className={"outlined-text"} style={{fontSize: 40}}>
+            <div style={{fontSize: 40}}>
                 React.js, Redux, Recoil, SCSS, Node.js, JavaScript, GitHub, GitLab, CI/CD
             </div>
         </div>
