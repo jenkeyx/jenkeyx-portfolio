@@ -236,19 +236,19 @@ export const localization = {
                     showcases: [
                         {
                             src: "megabyte/player.png",
-                            alt: "Страница и плеер подкаста с кратким описанием содержимого"
+                            alt: "Podcast page and player with short description"
                         },
                         {
                             src: "megabyte/podcast-page.png",
-                            alt: "Страница всех подкастов студии"
+                            alt: "All company podcasts page"
                         },
                         {
                             src: "megabyte/poll-title.png",
-                            alt: "Титульная страница для тестов"
+                            alt: "Intro poll page"
                         },
                         {
                             src: "megabyte/poll.png",
-                            alt: "Опрос со всплывающими результатами"
+                            alt: "Poll with results depends on user answer"
                         }
                     ]
                 }
@@ -259,7 +259,16 @@ export const localization = {
                 technologies : ["Node.js", "GraphQL", "Strapi", "JWT"],
                 description: "Разработал скрипт на Node.js для Strapi CMS, позволяющий обновлять, создавать " +
                     "данные о перечне и колличестве товаров при помощи таблицы формата .xlsx",
-                year: 2022
+                year: 2022,
+                pictures:{
+                    mainPic: "krypton/krypton-main.png",
+                    showcases: [
+                        {
+                            src: "krypton/catalog.png",
+                            alt: "Site catalog based on .xslx doc"
+                        },
+                    ]
+                }
             },
             {
                 id:"freedom",
@@ -289,7 +298,16 @@ export const localization = {
                 description: "Разработал конструктор для PWRBoard – стартапа на Indiegogo. Конструктор позволяет\n" +
                     "пользователю размещать устройства питания от различных устройств на виртуальной доске, вращать " +
                     "и удалять их. Механизм основан на drag and drop API.",
-                year: 2022
+                year: 2022,
+                pictures:{
+                    mainPic: "pwrboard/pwrboard-main.png",
+                    showcases: [
+                        {
+                            src: "pwrboard/constructor-demo.gif",
+                            alt: ""
+                        },
+                    ]
+                }
             },
             {
                 id:"graphene",
@@ -300,7 +318,36 @@ export const localization = {
                     " Разработал формы с валидацией данных, разработал компонент для записи видеосообщения " +
                     "при отправке формы при помощи Media Devices API с возможностью предпросмотра перед отправкой." +
                     " Разработал структуру для хранения данных членов команды в Strapi на соответствующей странице",
-                year: 2022
+                year: 2022,
+                pictures:{
+                    mainPic: "graphene/graphene-main.png",
+                    showcases: [
+                        {
+                            src: "graphene/landing.png",
+                            alt: ""
+                        },
+                        {
+                            src: "graphene/video-pitch.gif",
+                            alt: ""
+                        },
+                        {
+                            src: "graphene/apply-for-funding.png",
+                            alt: ""
+                        },
+                        {
+                            src: "graphene/team-page.png",
+                            alt: ""
+                        },
+                        {
+                            src: "graphene/member-page.png",
+                            alt: ""
+                        },
+                        {
+                            src: "graphene/feedback-form.png",
+                            alt: ""
+                        },
+                    ]
+                }
             },
             {
                 id:"mindmoney",
@@ -309,17 +356,52 @@ export const localization = {
                 description: "Разработал регистрацию и верификацию пользователя при помощи Redux+ReduxTools\n" +
                     "библиотек, валидацию форм. Разработал компоненты UI, основанных на Material UI, с " +
                     "переопределением стилей при помощи CSS-in-JS библиотек",
-                year: 2022
+                year: 2022,
+                pictures:{
+                    mainPic: "mindmoney/mindmoney-main.png",
+                    showcases: [
+                        {
+                            src: "mindmoney/reg-init-step.png",
+                            alt: ""
+                        },
+                        {
+                            src: "mindmoney/economic-profile.png",
+                            alt: ""
+                        },
+                        {
+                            src: "mindmoney/reg-complete.png",
+                            alt: ""
+                        },
+
+                    ]
+                }
             },
             {
                 id:"intg",
                 name: "INTG 101",
-                technologies: ["React.js, Recoil, Material UI,CSS-IN-JS, PWA"],
+                technologies: ["React.js", "Recoil", "Material UI","CSS-IN-JS", "PWA"],
                 description: "Разработал систему компонентов UI, создал документацию по системе компонентов " +
                     "при помощи Storybook. Внедрил Recoil для менеджмента данных в приложении. Реализовал " +
                     "особенноси PWA приложения: maskable icon, кэширование данных приложения. Разработал трекер, " +
                     "главное меню, страницу со статистикой.",
-                year: 2022
+                year: 2022,
+                pictures:{
+                    mainPic: "intg/intg-main.webp",
+                    showcases: [
+                        {
+                            src: "intg/tracker.webp",
+                            alt: ""
+                        },
+                        {
+                            src: "intg/sessions-and-progress.webp",
+                            alt: ""
+                        },
+                        {
+                            src: "intg/ui-demo.gif",
+                            alt: ""
+                        },
+                    ]
+                }
             }
         ]
     },
