@@ -44,7 +44,7 @@ const ListItem = ({projectData}) => {
 
     return (<div className={styles.project}>
         <div className={styles.head} onClick={()=>setOpen(prev=> !prev)}>
-            <Link to={`/projects/${projectData.id}`} style={{textDecoration:"none", color:"inherit"}}>
+            <Link to={`/projects/${projectData.id}`} style={{textDecoration:"none", color:"inherit"}} onClick={()=>window.scrollTo(0,0)}>
                 <div className={`${styles.name} outlined-text ${open ? styles.open : null}`}>
                     {projectData.name}
                 </div>
