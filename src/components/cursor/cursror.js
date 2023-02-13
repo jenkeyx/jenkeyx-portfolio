@@ -12,7 +12,7 @@ const Cursor = () => {
 
     useEffect(() => {
         document.addEventListener('mousemove', e => {
-            gsap.to('circle', {
+            gsap.to('.trailing-circle', {
                 x: e.clientX - window.innerWidth / 2,
                 y: e.clientY - window.innerHeight / 2,
                 stagger: 0.1
