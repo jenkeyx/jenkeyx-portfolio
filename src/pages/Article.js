@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {Link, useLoaderData} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useLoaderData, useLocation} from "react-router-dom";
 import styles from"./article.module.scss";
 import {ReactComponent as ArrowBack} from "../static/svg/arrow-back.svg";
 import ProjectImage, {ImageLoader} from "../components/image/ProjectImage";
@@ -11,6 +11,16 @@ export const getArticleName = ({params}) => {
 const Article = ({projectsData}) => {
     const projectId = useLoaderData()
     const data = projectsData.find(project=> project.id === projectId)
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        document.documentElement.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant",
+        });
+    }, [pathname]);
 
     const [isMainImgLoaded, setIsMainImgLoaded] = useState(false);
 

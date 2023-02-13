@@ -29,7 +29,7 @@ function App() {
             path:"/projects/:projectId",
             loader: getArticleName,
             element: <Article projectsData={localizationData.projects}/>
-        }
+        },
     ])
 
     return (
