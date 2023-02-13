@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link, useLoaderData} from "react-router-dom";
 import styles from"./article.module.scss";
 import {ReactComponent as ArrowBack} from "../static/svg/arrow-back.svg";
+import ProjectImage, {ImageLoader} from "../components/image/ProjectImage";
 
 export const getArticleName = ({params}) => {
     return params.projectId
@@ -10,6 +11,8 @@ export const getArticleName = ({params}) => {
 const Article = ({projectsData}) => {
     const projectId = useLoaderData()
     const data = projectsData.find(project=> project.id === projectId)
+
+    const [isMainImgLoaded, setIsMainImgLoaded] = useState(false);
 
     return (<div className={styles["article"]}>
         <div className={styles["header"]}>
@@ -27,18 +30,14 @@ const Article = ({projectsData}) => {
         </div>
         <div className={styles["content"]}>
             <div className={styles["main-pic-wrap"]}>
-                <img className={styles["main-pic"]} alt={data.name} src={require(`../static/img/${data.pictures.mainPic}`)}/>
+                {!isMainImgLoaded && <ImageLoader style={{flexShrink:0}}/>}
+                <img className={styles["main-pic"]} alt={data.name} src={require(`../static/img/${data.pictures.mainPic}`)} onLoad={()=> setIsMainImgLoaded(true)}/>
             </div>
             <div className={styles["description"]}>
                 {data.description}
             </div>
                 {
-                    data.pictures.showcases.map(showcase=><div className={styles["showcase"]}>
-                        <img className={styles["main-pic"]} src={require(`../static/img/${showcase.src}`)} alt={showcase.alt}/>
-                        <div className={styles["caption"]}>
-                            {showcase.alt}
-                        </div>
-                    </div>)
+                    data.pictures.showcases.map(showcase=><ProjectImage src={showcase.src} alt={showcase.alt}/>)
                 }
         </div>
     </div>)
