@@ -21,6 +21,10 @@ const Article = ({projectsData}) => {
             behavior: "instant",
         });
     }, [pathname]);
+    // useEffect(() => {
+    //     console.log("MOUNTED")
+    // }, []);
+
 
     const [isMainImgLoaded, setIsMainImgLoaded] = useState(false);
 
@@ -41,7 +45,7 @@ const Article = ({projectsData}) => {
         <div className={styles["content"]}>
             <div className={styles["main-pic-wrap"]}>
                 {!isMainImgLoaded && <ImageLoader style={{flexShrink:0}}/>}
-                <img className={styles["main-pic"]} alt={data.name} src={require(`../static/img/${data.pictures.mainPic}`)} onLoad={()=> setIsMainImgLoaded(true)}/>
+                <img className={styles["main-pic"]} style={{display: isMainImgLoaded ? "block" : "none"}} alt={data.name} src={require(`../static/img/${data.pictures.mainPic}`)} onLoad={()=> setIsMainImgLoaded(true)}/>
             </div>
             <div className={styles["description"]}>
                 {data.description}
