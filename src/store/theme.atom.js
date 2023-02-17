@@ -3,6 +3,6 @@ import {atom} from "recoil";
 export const themeAtom = atom({
     key: "themeAtom",
     default:{
-        theme: "dark"
+        theme: window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
     }
 })
