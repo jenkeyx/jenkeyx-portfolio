@@ -31,8 +31,6 @@ function App() {
             element: <Article projectsData={localizationData.projects}/>
         },
     ])
-
-
     return (
     <>
         <Cursor/>
