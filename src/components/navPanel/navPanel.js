@@ -36,16 +36,6 @@ const NavItem = ({href, children, color, isVisible}) =>{
     }
 
     useEffect(() => {
-        if (navItemRef.current){
-            navItemRef.current.addEventListener("mouseover",()=>changeCursorState(2))
-
-            navItemRef.current.addEventListener("click",()=>changeCursorState(2))
-
-            navItemRef.current.addEventListener("mouseleave", ()=>changeCursorState(1))
-        }
-    }, [navItemRef]);
-
-    useEffect(() => {
         if (isVisible) {
             changeCursorState(1)
             setSelected(isVisible)

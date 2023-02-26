@@ -7,12 +7,10 @@ const ProjectImage = ({src, alt})=>{
     const img = new Image()
     img.src = `../../static/img/${src}`
 
-    console.log(img.naturalWidth, img.width)
-
     return(
         <div className={styles["showcase"]}>
-            <img className={styles["main-pic"]} src={require(`../../static/img/${src}`)} alt={alt} onLoad={()=>setIsLoaded(true)}/>
             {!isLoaded && <ImageLoader/>}
+            <img style={{display: isLoaded ? "block" : "none"}} className={styles["main-pic"]} src={require(`../../static/img/${src}`)} alt={alt} onLoad={()=>setIsLoaded(true)}/>
             <div className={styles["caption"]}>
                 {alt}
             </div>

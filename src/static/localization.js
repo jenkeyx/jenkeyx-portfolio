@@ -11,8 +11,11 @@ export const localization = {
             skills: "Skills",
         },
         about:{
-            description: "ITMO bachelor in computer science.Front-end developer with 1 year of commercial experience." +
-                " Build UI, provide better UX for web-sites.",
+            description: "I am Sergey Mkhitaryan, a front-end developer from St. Petersburg." +
+                " With 2 years of experience in web development, I have gained skills in solving " +
+                "a wide range of tasks, from developing new applications to improving existing ones, " +
+                "to mentoring and code reviews. In my work, I strive to implement the client's requirements " +
+                "with attention to detail.",
             facts:{
                 experience: "Years of experience in front-end developing",
                 projects: "Projects"
@@ -22,30 +25,32 @@ export const localization = {
             {
                 id: "megabyte",
                 name: "Megabyte media",
-                technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript", "Material UI"],
-                description: "Developed frontend for a university’s media portal with a team of 4 developers. " +
-                    "Implemented RESTful API based on OpenAPI Specification. Implemented UI elements for a project " +
-                    "component system, and implemented a custom podcast player using React Hooks and Web Audio API. " +
-                    "Developed site pages with data fetch using Next.js methods according to Server Side Rendering",
+                technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript"],
+                description: "A website for a media outlet affiliated with ITMO University was created and " +
+                    "launched by a team of 4 people. I developed interactive surveys with editorial comments " +
+                    "similar to those on the Meduza website. I also created a page on which all studio podcasts," +
+                    " with dozens or even hundreds of episodes, were collected and published on our own platform. " +
+                    "Additionally, I designed a player for listening to the podcasts with a custom layout. " +
+                    "The website was ranked among the top three \"Best Websites\" by the youth media center \"SEC\".",
                 year: 2021,
                 pictures:{
                     mainPic: "megabyte/mb-main.png",
                     showcases: [
                         {
                             src: "megabyte/player.png",
-                            alt: "Podcast page and player with short description"
+                            alt: "A page featuring a podcast episode, player, and brief summary."
                         },
                         {
                             src: "megabyte/podcast-page.png",
-                            alt: "All company podcasts page"
+                            alt: "All podcasts are now gathered in one place."
                         },
                         {
                             src: "megabyte/poll-title.png",
-                            alt: "Intro poll page"
+                            alt: "A page with a poster and a description of the quiz"
                         },
                         {
                             src: "megabyte/poll.png",
-                            alt: "Poll with results depends on user answer"
+                            alt: "Each user response is accompanied by a relevant editorial comment"
                         }
                     ]
                 }
@@ -54,8 +59,10 @@ export const localization = {
                 id: "krypton",
                 name: "Krypton",
                 technologies : ["Node.js", "GraphQL", "Strapi", "JWT"],
-                description: "Developed node.js script for a Strapi CMS, that fetches product data in an XML file which " +
-                    "can be uploaded in CMS, and maps it on Strapi collection types.",
+                description: "I developed a program for CMS Strapi that enables the loading of 180+ " +
+                    "products into the database from an xlsx table, while also importing corresponding " +
+                    "photographs. The program takes into account any changes to the products and prevents " +
+                    "duplicates, thus considerably simplifying the management of goods.",
                 year: 2022,
                 pictures:{
                     mainPic: "krypton/krypton-main.png",
@@ -71,7 +78,8 @@ export const localization = {
                 id: "freedom",
                 name: "Freedom 24",
                 technologies : ["HTML5", "SCSS", "JavaScript", "Bootstrap", "GitLab"],
-                description: "Implemented US corporate stock options page layout using vanilla JS, SCSS and Bottstrap components",
+                description: "Implemented US corporate stock options page layout using Vanilla-JS, " +
+                    "SCSS and Bootstrap components with adaptive-response design",
                 year: 2022,
                 pictures:{
                     mainPic: "freedom/freedom-main.png",
@@ -91,17 +99,18 @@ export const localization = {
                 id:"pwrboard",
                 name: "PWRBoard",
                 technologies : ["React.js", "React Hooks", "JavaScript", "SCSS", "GitLab"],
-                description: "Implemented PWRboard constructor for a project launch on Indiegogo. Constructor allows the\n" +
-                    "user to select many batteries, and charger components from the list and put them together on a grid." +
-                    " UX is based on dragging components on a grid using Drag and drop API, then the user can rotate or " +
-                    "delete them.",
+                description: "Created the PWRboard constructor for an advertising company on IndieGoGo. " +
+                    "The constructor demonstrates the capabilities of the product, " +
+                    "allowing user to place 45+ accessories and batteries from various " +
+                    "manufactures on the charging station  ",
                 year: 2022,
                 pictures:{
                     mainPic: "pwrboard/pwrboard-main.png",
                     showcases: [
                         {
                             src: "pwrboard/constructor-demo.gif",
-                            alt: ""
+                            alt: "The user can place the devices in any order, rotate and delete them, " +
+                                "the constructor prevents the components from overlapping"
                         },
                     ]
                 }
@@ -111,37 +120,38 @@ export const localization = {
                 name: "Graphene",
                 technologies : ["Gatsby.js", "Strapi", "React.js", "GraphQL", "Material UI", "Media Devices API",
                     "Intersection observer API", "GitLab"],
-                description: "Developed Video landing component, developed ”Founders” and ”Portfolio” page." +
-                    " Implemented component for Video pitch recording using Media Devices API.Implemented data " +
-                    "fetching by using GraphQL requests. Developed and implemented collection types in Strapi to " +
-                    "store data about company team members. Implemented Team page.",
+                description: "Developed the landing page and pages of the main sections for the website of the " +
+                    "american venture company Graphene. Forms with validation have been implemented through which " +
+                    "clients and business founders can contact the company.",
                 year: 2022,
                 pictures:{
                     mainPic: "graphene/graphene-main.png",
                     showcases: [
                         {
                             src: "graphene/landing.png",
-                            alt: ""
+                            alt: "Video landing"
                         },
                         {
                             src: "graphene/video-pitch.gif",
-                            alt: ""
+                            alt: "A founder can record elevator-pitch, outlining the idea of his business " +
+                                "and telling about himself in more detail. The pitch can be overwritten and viewed before sanding. " +
+                                "Also works on mobile devices"
                         },
                         {
                             src: "graphene/apply-for-funding.png",
-                            alt: ""
+                            alt: "A form for contacting the founders with the company"
                         },
                         {
                             src: "graphene/team-page.png",
-                            alt: ""
+                            alt: "Company team page"
                         },
                         {
                             src: "graphene/member-page.png",
-                            alt: ""
+                            alt: "Employee's page with social profiles and a brief biography"
                         },
                         {
                             src: "graphene/feedback-form.png",
-                            alt: ""
+                            alt: "Investor feedback form with the company"
                         },
                     ]
                 }
@@ -150,24 +160,24 @@ export const localization = {
                 id:"mindmoney",
                 name: "Mind-money",
                 technologies : ["React.js", "Redux", "Redux-tools", "Gatsby.js", "Material UI"],
-                description: "Implemented user registration and verification form using Redux+ReduxTools state management " +
-                    "library and fields validation. Developed UI components based on Material UI components with style " +
-                    "overrides by CSS-in-JS libraries.",
+                description: "Created the Mind-money user step-by-step registration forms in the Tradernet" +
+                    " Freedom finance financial network system. Thus, the user registers directly through " +
+                    "the company's website, instead of registering on another resource.",
                 year: 2022,
                 pictures:{
                     mainPic: "mindmoney/mindmoney-main.png",
                     showcases: [
                         {
                             src: "mindmoney/reg-init-step.png",
-                            alt: ""
+                            alt: "Pre-registration of a user with verification of the existence of an account"
                         },
                         {
                             src: "mindmoney/economic-profile.png",
-                            alt: ""
+                            alt: "Formation of the economic profile of the account"
                         },
                         {
                             src: "mindmoney/reg-complete.png",
-                            alt: ""
+                            alt: "Continuing registration on a mobile device"
                         },
 
                     ]
@@ -176,25 +186,26 @@ export const localization = {
             {
                 id:"intg",
                 name: "INTG 101",
-                technologies: ["React.js, Recoil, Material UI,CSS-IN-JS, PWA"],
-                description: "Implemented component system of UI, created documentation via Storybook libray, " +
-                    "developed data flow system of the app based on Recoil. Developed tracker page, statistics, " +
-                    "main menu. Implemented PWA features: maskable icon, app caching to be avalable offline, skeleton.",
+                technologies: ["React.js", "Recoil", "Material UI","CSS-IN-JS", "PWA"],
+                description: "Took an active part in the development of the PWA habits tracker application " +
+                    "as a leading front-end developer. Created the architecture of the client part of the " +
+                    "application, developed a system of UI components, aiming to bring the UX of the " +
+                    "application closer to the native app.",
                 year: 2022,
                 pictures:{
                     mainPic: "intg/intg-main.webp",
                     showcases: [
                         {
                             src: "intg/tracker.webp",
-                            alt: ""
+                            alt: "A tracker page where a user can rate themselves by three categories of behaviors"
                         },
                         {
                             src: "intg/sessions-and-progress.webp",
-                            alt: ""
+                            alt: "Statistics and user progress against the background of the overall progress of the team"
                         },
                         {
                             src: "intg/ui-demo.gif",
-                            alt: ""
+                            alt: "App UX demonstration"
                         },
                     ]
                 }
@@ -213,8 +224,10 @@ export const localization = {
             skills: "Навыки",
         },
         about:{
-            description: "Бакалавр ИТМО в области компьютерных наук, с 1 годом коммерческой разработки" +
-                "Разрабатываю UI, улучшаю UX веб-сайтов и веб-приложений",
+            description: "Я – Сергей Мхитарян, front-end разработчик из Санкт-Петербурга. За 2 года работы " +
+                "в сфере веб-разработки я получил опыт решения широкого спектра задач: создания новых и " +
+                "улучшения старых приложений, до менторства и код-ревью. В своей работе я старался наиболее " +
+                "точно реализовать все желания клиента с вниманием к деталям. ",
             facts:{
                 experience: "Года опыта в front-end разработке",
                 projects: "Проектов"
@@ -224,31 +237,31 @@ export const localization = {
             {
                 id:"megabyte",
                 name: "Мегабайт медиа",
-                technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript", "Material UI"],
-                description: "Разрабатывал компоненты для университетского медиа портала в команде " +
-                    "из 4-х разработчиков. Разработал RESTful API на спецификации OpenAPI. Разработал " +
-                    "собственную реализацию плеера для подкастов при помощи React Hooks и Web Audio API. " +
-                    "В ходе разработки использовали различные методы Next.js с " +
-                    "приминением технологии Server Side Rendering",
+                technologies : ["Next.js", "Web Audio API", "Swagger", "JavaScript"],
+                description: "Создан и запущен сайт СМИ при университете ИТМО в команде из 4-х человек. " +
+                    "Мною разработаны интерактивные опросы с комментариями редакции на манер тестов Meduza. Создана страница, " +
+                    "где собраны и опубликованы на собственной платформе все подкасты студии с десятками и " +
+                    "сотнями выпусков в каждом. Разработан плеер для прослушивания подкастов  с индивидуальным дизайном. " +
+                    "Сайт попал в тройку лауреатов «Лучший сайт» по версии молодёжного медиацентра «НОС» ",
                 year: 2021,
                 pictures:{
                     mainPic: "megabyte/mb-main.png",
                     showcases: [
                         {
                             src: "megabyte/player.png",
-                            alt: "Podcast page and player with short description"
+                            alt: "Страница с выпуском подкаста, плеером и кратким содержанием"
                         },
                         {
                             src: "megabyte/podcast-page.png",
-                            alt: "All company podcasts page"
+                            alt: "Все подкасты теперь собраны в одном месте."
                         },
                         {
                             src: "megabyte/poll-title.png",
-                            alt: "Intro poll page"
+                            alt: "Страница с постером и описанием теста"
                         },
                         {
                             src: "megabyte/poll.png",
-                            alt: "Poll with results depends on user answer"
+                            alt: "Каждый ответ пользователя сопровождается соответствующим комментарием редакции"
                         }
                     ]
                 }
@@ -257,15 +270,17 @@ export const localization = {
                 id:"krypton",
                 name: "Krypton",
                 technologies : ["Node.js", "GraphQL", "Strapi", "JWT"],
-                description: "Разработал скрипт на Node.js для Strapi CMS, позволяющий обновлять, создавать " +
-                    "данные о перечне и колличестве товаров при помощи таблицы формата .xlsx",
+                description: "Разработал программу для CMS Strapi, которая позволяет загружать " +
+                    "180+ товаров в базу данных из таблицы формата xlsx, подгружая соответствующие " +
+                    "фотографии. Программа учитывает изменения товаров и не допускает дубликатов, " +
+                    "что заметно упрощает товарный менеджмент.",
                 year: 2022,
                 pictures:{
                     mainPic: "krypton/krypton-main.png",
                     showcases: [
                         {
                             src: "krypton/catalog.png",
-                            alt: "Site catalog based on .xslx doc"
+                            alt: "Каталог товаров, заполненный благодаря работе скрипта"
                         },
                     ]
                 }
@@ -274,8 +289,8 @@ export const localization = {
                 id:"freedom",
                 name: "Freedom 24",
                 technologies : ["HTML5", "SCSS", "JavaScript", "Bootstrap", "GitLab"],
-                description: "Разработал страницу \"Опционы акций корпораций США\" для финансовой организации " +
-                    "Freedom Finance Технологии: HTML5, SCSS, JavaScript, Bootstrap, GitLab",
+                description: "Разработал страницу \"Опционы акций корпораций США\" при помощи SCSS, Vanilla-JS " +
+                    "и Bootstrap для финансовой организации Freedom Finance c адаптивно-отзывчивым дизайном",
                 year: 2022,
                 pictures:{
                     mainPic: "freedom/freedom-main.png",
@@ -295,16 +310,17 @@ export const localization = {
                 id:"pwrboard",
                 name: "PWRBoard",
                 technologies : ["React.js", "React Hooks", "JavaScript", "SCSS", "GitLab"],
-                description: "Разработал конструктор для PWRBoard – стартапа на Indiegogo. Конструктор позволяет\n" +
-                    "пользователю размещать устройства питания от различных устройств на виртуальной доске, вращать " +
-                    "и удалять их. Механизм основан на drag and drop API.",
+                description: "Создал конструктор стартапа PWRboard для рекламной кампании на Indiegogo. " +
+                    "Конструктор позволяет пользователю ознакомиться с возможностями продукта, позволяя " +
+                    "разместить на зарядной станции более 45 аксессуаров и аккумуляторов от различных производителей.",
                 year: 2022,
                 pictures:{
                     mainPic: "pwrboard/pwrboard-main.png",
                     showcases: [
                         {
                             src: "pwrboard/constructor-demo.gif",
-                            alt: ""
+                            alt: "Пользователь может размещать устройства в любом порядке, вращать и " +
+                                "удалять их, конструктор предотвращает наложения компонентов."
                         },
                     ]
                 }
@@ -314,37 +330,39 @@ export const localization = {
                 name: "Graphene",
                 technologies : ["Gatsby.js", "Strapi", "React.js", "GraphQL", "Material UI", "Media Devices API",
                     "Intersection observer API", "GitLab"],
-                description: "Разработал Лэндинг компонент, страницу \"Founders\", и \"Portfolio\"." +
-                    " Разработал формы с валидацией данных, разработал компонент для записи видеосообщения " +
-                    "при отправке формы при помощи Media Devices API с возможностью предпросмотра перед отправкой." +
-                    " Разработал структуру для хранения данных членов команды в Strapi на соответствующей странице",
+                description: "Разработал лендинг и страницы основных разделов для сайта американской венчурной " +
+                    "компании Graphene. Реализованы формы с валидацией, через которые клиенты и учредители " +
+                    "бизнесов могут связываться с компанией. ",
                 year: 2022,
                 pictures:{
                     mainPic: "graphene/graphene-main.png",
                     showcases: [
                         {
                             src: "graphene/landing.png",
-                            alt: ""
+                            alt: "Видео-лэндинг"
                         },
                         {
                             src: "graphene/video-pitch.gif",
-                            alt: ""
+                            alt: "Учередитель может записать elevator-pitch, " +
+                                "изложив идею своего бизнеса и рассказав о себе подробнее. " +
+                                "Питч можно перезаписать и просмотреть перед отправкой в том числе" +
+                                " и на мобильных устройствах"
                         },
                         {
                             src: "graphene/apply-for-funding.png",
-                            alt: ""
+                            alt: "Форма для связи учередителей с компанией"
                         },
                         {
                             src: "graphene/team-page.png",
-                            alt: ""
+                            alt: "Страница сотрудников компании"
                         },
                         {
                             src: "graphene/member-page.png",
-                            alt: ""
+                            alt: "Страница отдельного сотрудника с соц. профилями и краткой биографией"
                         },
                         {
                             src: "graphene/feedback-form.png",
-                            alt: ""
+                            alt: "Форма для обратной связи инвесторов с компанией"
                         },
                     ]
                 }
@@ -353,26 +371,25 @@ export const localization = {
                 id:"mindmoney",
                 name: "Mind-money",
                 technologies : ["React.js", "Redux", "Redux-tools", "Gatsby.js", "Material UI"],
-                description: "Разработал регистрацию и верификацию пользователя при помощи Redux+ReduxTools\n" +
-                    "библиотек, валидацию форм. Разработал компоненты UI, основанных на Material UI, с " +
-                    "переопределением стилей при помощи CSS-in-JS библиотек",
+                description: "Создал формы пошаговой регистрации пользователя Mind-money в системе финансовой " +
+                    "сети Tradernet Freedom finance. Таким образом пользователь регистрируется напрямую через " +
+                    "сайт компании, вместо регистрации на ином ресурсе.",
                 year: 2022,
                 pictures:{
                     mainPic: "mindmoney/mindmoney-main.png",
                     showcases: [
                         {
                             src: "mindmoney/reg-init-step.png",
-                            alt: ""
+                            alt: "Предварительная регистрация пользователя с проверкой на существование учетной записи"
                         },
                         {
                             src: "mindmoney/economic-profile.png",
-                            alt: ""
+                            alt: "Формирование экономического профиля учетной записи"
                         },
                         {
                             src: "mindmoney/reg-complete.png",
-                            alt: ""
+                            alt: "Продолжение регистрации на мобильном устройстве"
                         },
-
                     ]
                 }
             },
@@ -380,25 +397,24 @@ export const localization = {
                 id:"intg",
                 name: "INTG 101",
                 technologies: ["React.js", "Recoil", "Material UI","CSS-IN-JS", "PWA"],
-                description: "Разработал систему компонентов UI, создал документацию по системе компонентов " +
-                    "при помощи Storybook. Внедрил Recoil для менеджмента данных в приложении. Реализовал " +
-                    "особенноси PWA приложения: maskable icon, кэширование данных приложения. Разработал трекер, " +
-                    "главное меню, страницу со статистикой.",
+                description: "Принимал активное участие в разработке и предварителном запусуке PWA приложения-трекера привычек" +
+                    " в качестве ведущего front-end разработчика. Создал архитектуру клиентской части приложения, разработал " +
+                    "систему UI-компонентов, стремясь приблизить UX приложения к native app",
                 year: 2022,
                 pictures:{
                     mainPic: "intg/intg-main.webp",
                     showcases: [
                         {
                             src: "intg/tracker.webp",
-                            alt: ""
+                            alt: "Страница трекера, где пользователь может оценить себя по трем категориям поведений"
                         },
                         {
                             src: "intg/sessions-and-progress.webp",
-                            alt: ""
+                            alt: "Статистика и прогресс пользователя на фоне общего прогресса команды"
                         },
                         {
                             src: "intg/ui-demo.gif",
-                            alt: ""
+                            alt: "Демонстрация UX приложения"
                         },
                     ]
                 }
