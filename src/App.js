@@ -14,6 +14,7 @@ import {
 
 import MainPage from "./pages/mainPage";
 import Article, {getArticleName} from "./pages/Article";
+import Footer from "./components/footer/footer";
 
 function App() {
     const theme = useRecoilValue(themeAtom)
@@ -40,7 +41,7 @@ function App() {
             <div className={"content-wrap"} >
                 <RouterProvider router={router}/>
             </div>
-
+            <Footer/>
         </div>
 
     </>
