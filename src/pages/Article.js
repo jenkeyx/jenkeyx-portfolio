@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {Link, useLoaderData, useLocation} from "react-router-dom";
+import {useLoaderData, useLocation} from "react-router-dom";
 import styles from"./article.module.scss";
 import {ReactComponent as ArrowBack} from "../static/svg/arrow-back.svg";
 import ProjectImage, {ImageLoader} from "../components/image/ProjectImage";
+import { HashLink as Link } from 'react-router-hash-link';
 
 export const getArticleName = ({params}) => {
     return params.projectId
@@ -30,7 +31,7 @@ const Article = ({projectsData}) => {
 
     return (<div className={styles["article"]}>
         <div className={styles["header"]}>
-            <Link to={"/"} className={styles["back-button"]}>
+            <Link to={"/#projects"} className={styles["back-button"]}>
                 <button className={styles["back-button"]}>
                     <ArrowBack/>
                 </button>
