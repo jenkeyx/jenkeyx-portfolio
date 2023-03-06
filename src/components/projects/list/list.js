@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styles from "./list.module.scss";
-import {ReactComponent as Cross} from "../../../static/svg/cross.svg"
+import {ReactComponent as ArrowRight} from "../../../static/svg/arrow_right.svg"
 import {Link} from "react-router-dom";
 
 
@@ -49,7 +49,7 @@ const ListItem = ({projectData}) => {
                     {projectData.name}
                 </div>
             </Link>
-            <Cross className={`${styles.cross} ${open ? styles.open : null}`} />
+            <ArrowRight/>
         </div>
     </div>)
 }
