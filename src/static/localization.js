@@ -210,7 +210,10 @@ export const localization = {
                     ]
                 }
             }
-        ]
+        ],
+        footer:{
+            message:"Let's work together!"
+        }
     },
     rus: {
         greeting: "Привет",
@@ -419,6 +422,9 @@ export const localization = {
                     ]
                 }
             }
-        ]
+        ],
+        footer:{
+            message:"Давайте работать вместе!"
+        }
     },
 }

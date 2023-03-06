@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./footer.module.scss"
-const Footer = ()=>{
+const Footer = ({localizationData})=>{
     return <div className={styles["wrap"]}>
         <div className={styles["title"]}>
-            Let's work together
+            {localizationData.footer.message}
         </div>
         <div className={styles["contacts-list"]}>
             <div className={styles["contact"]}>

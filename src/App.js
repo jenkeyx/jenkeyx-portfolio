@@ -41,7 +41,7 @@ function App() {
             <div className={"content-wrap"} >
                 <RouterProvider router={router}/>
             </div>
-            <Footer/>
+            <Footer localizationData={localizationData}/>
         </div>
 
     </>
