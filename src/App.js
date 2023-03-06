@@ -37,7 +37,6 @@ function App() {
         <Cursor/>
         <div className={`App ${theme.theme === "light" ? "light" : "dark"}`}>
             <Header/>
-            <div className={"background"}></div>
             <div className={"content-wrap"} >
                 <RouterProvider router={router}/>
             </div>

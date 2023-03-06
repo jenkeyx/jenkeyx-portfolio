@@ -4,6 +4,19 @@
     font-family: Play, sans-serif;
 }
 
+.App > * {
+    z-index: 4;
+    position: relative;
+}
+
+.App.light{
+    background: var(--background);
+}
+
+.App.dark{
+    background: var(--background);
+}
+
 @media (max-width: 1024px) {
     .App{
         padding: 40px 20px
