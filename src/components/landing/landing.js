@@ -14,7 +14,7 @@ const Landing = ({refProp,data}) => {
                     <span className={"outlined-text"}>{data.introducing.iam}</span> <span>{data.introducing.name}</span>
                 </div>
                 <div className={styles.code}>
-                    &lt;seo project/&gt;
+                    &lt;seo project 1/&gt;
                 </div>
 
                 <button className={styles["arrow-down"]}>
